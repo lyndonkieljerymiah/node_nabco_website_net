@@ -1,0 +1,33 @@
+@import url("variable.less");
+@import url("mixin.less");
+
+
+.nb-slider {
+    position: relative;
+    .nb-slider-container {
+        overflow: hidden;
+        width: 100%;
+        height: 610px;
+        > ul  {
+            margin: 0;
+            padding:0;
+            li {
+                padding: @padding-base-vertical;
+                border-bottom: 1px solid @gray-lighter;
+                width: 100%;
+                height: 216px;
+            }
+        }
+
+        .nb-slider-video {
+            width: 100%;
+            height: 194px;
+        }
+    }
+    
+    .nb-slider-control {
+        width: 100%;
+        position: absolute;
+        
+    }
+}

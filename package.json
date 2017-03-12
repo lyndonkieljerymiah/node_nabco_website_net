@@ -1,0 +1,26 @@
+{
+  "name": "nabco-site.client",
+  "version": "0.0.0",
+  "description": "NabcoSite.Client",
+  "main": "server.js",
+  "author": {
+    "name": "arnold.mercado"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "underscore": "^1.8.3",
+    "vash": "^0.12.2"
+  },
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-less": "^3.3.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.1.0"
+  }
+}
