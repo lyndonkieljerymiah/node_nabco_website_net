@@ -13,7 +13,9 @@ gulp.task("server", function () {
 });
 
 gulp.task('less', function () {
-    return gulp.src("public/src/less/default.less")
+    return gulp.src([
+        "public/src/less/default.less",
+        "public/src/less/social.less"])
         .pipe(less())
         .pipe(gulp.dest("public/dist/css"))
         .pipe(reload());
@@ -36,7 +38,9 @@ gulp.task("watch", function () {
 });
 
 gulp.task('minify-css', ['less'], function () {
-    return gulp.src('public/dist/css/default.css')
+    return gulp.src([
+        'public/dist/css/default.css',
+        'public/dist/css/social.css'])
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('public/dist/css'));

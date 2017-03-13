@@ -16,21 +16,36 @@ label {
     font-size: @font-size-base;
 }
 
-/*sticker*/
-@import "parts/sticker.less";
-/*==================*/
+
+.iframe {
+    position: fixed;
+    top: 2%;
+    left: 0px;
+    background-color: transparent;
+    height:720px;
+    
+    @media @lg-media {
+        width: 470px;
+    }
+
+    @media @xl-media {
+        width: 470px;
+    }
+
+    @media @md-media {
+        width: 470px;
+    }
+
+    @media @sm-media {
+        width: 450px;
+    }
+}
 
 /*navigation*/
 @import "parts/navigation.less";
 /*=============*/
 
-/*slider*/
-@import "parts/slider.less";
-/*========================*/
 
-/*location*/
-@import "parts/location.less";
-/*========================*/
 
 
 

@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/dist/css/social.min.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- sticker -->
+    <div id="sticker" class="sticker stk-show">
+        <div class="social-container">
+            <ul>
+                <li class="social-nav">
+                    <a id="social-fb" class="social-icon-bg bg-blue active" data-container="fb-container" data-title="Facebook">
+                        <span><i class="fa fa-facebook"></i></span>
+                    </a>
+                </li>
+                <li class="social-nav">
+                    <a id="social-youtube" class="social-icon-bg bg-red" data-container="youtube-container" data-title="Youtube">
+                        <span><i class="fa fa-youtube-play"></i></span>
+                    </a>
+                </li>
+                <li class="social-nav">
+                    <a id="social-comment" class="social-icon-bg bg-gray" data-container="comment-container" data-title="Comment">
+                        <span><i class="fa fa-envelope-o"></i></span>
+                    </a>
+                </li>
+                <li class="social-nav">
+                    <a id="social-location" class="social-icon-bg bg-creme" data-container="location-container" data-title="Location">
+                        <span><i class="fa fa-map-marker"></i></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="wrapper">
+            <header class="heading">
+                <p id="social-title">Facebook</p>
+                <div class="dark-cover"></div>
+            </header>
+            <div class="content">
+                <div id="fb-container">
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNABCO-Furniture-Centre-1503548559966817%2F&tabs=timeline&width=340&height=680&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1805387546380028"
+                            height="620" style="border:none;overflow:hidden;width:100%" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                </div>
+                <div id="youtube-container" style="display:none">
+                    <div class="nb-slider">
+                        <div class="nb-slider-container">
+                            <ul>
+                                <li style="opacity:1"><iframe class="nb-slider-video" src="https://www.youtube.com/embed/j5jIjI_Ccqc" frameborder="0" allowfullscreen></iframe></li>
+                                <li style="opacity:1"><iframe class="nb-slider-video" src="https://www.youtube.com/embed/DTKQONRv6Ng" frameborder="0" allowfullscreen></iframe></li>
+                                <li style="opacity:1"><iframe class="nb-slider-video" src="https://www.youtube.com/embed/Z1eKNuno7Uw" frameborder="0" allowfullscreen></iframe></li>
+                                <li style="opacity:1"><iframe class="nb-slider-video" src="https://www.youtube.com/embed/QufJ0ctfZG0" frameborder="0" allowfullscreen></iframe></li>
+                                <li style="opacity:1"><iframe class="nb-slider-video" src="https://www.youtube.com/embed/eVbP8564ZR0" frameborder="0" allowfullscreen></iframe></li>
+                            </ul>
+                        </div>
+                        <div class="nb-slider-control">
+                            <a id="downButton" href="#"><i class="fa fa-arrow-circle-down"></i></a>
+                            <a id="upButton" href="#"><i class="fa fa-arrow-circle-up"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="comment-container" style="display:none">
+                    <form class="form">
+                        <div class="form-group">
+                            <label>Email Address:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope-open fa-fw"></i></span>
+                                <input type="text" name="emailAddress" class="form-control" placeholder="Email Address">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Mobile No:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-mobile-phone fa-fw"></i></span>
+                                <input type="text" name="mobileNo" class="form-control" placeholder="Mobile No">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Subject No:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-align-justify fa-fw"></i></span>
+                                <input type="text" name="subject" class="form-control" placeholder="Subject">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Message:</label>
+                            <div><textarea type="text" name="message" class="form-control"></textarea> </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-info">Send</button>
+                        </div>
+                    </form>
+                </div>
+                <div id="location-container" style="display:none">
+                    <div class="nb-location">
+                        <div class="location-wrapper">
+                            <ul>
+                                <li>
+                                    <div class="map-content">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3609.0619003262086!2d51.573588!3d25.23484!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45cee18e475f97%3A0x3e1da4faed0d794c!2zTmFiY28gRnVybml0dXJlIENlbnRlciDZhdix2YPYsiDZhtin2KjZg9mIINmE2YTZhdmB2LHZiNi02KfYqg!5e0!3m2!1sen!2s!4v1489251350100"
+                                                frameborder="0" style="border:0;width:100%;height:100%" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="content">
+                                        <address>
+                                            <strong>Wakrah Branch</strong><br>
+                                            <small>
+                                                Airport Street, Wakra Road P.O. Box 1654, <br>
+                                                Doha State of Qatar<br>
+                                                <abbr title="Phone"><i class="fa fa-phone"></i></abbr> +(974) 4466-66-46
+                                            </small>
+                                        </address>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="map-content">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28851.647069169227!2d51.46848!3d25.322479!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x677700b4dc79f3ea!2sNABCO+FURNITURE+CENTRE%2C+Garaffah+Branch!5e0!3m2!1sen!2s!4v1489251717884"
+                                                frameborder="0" style="border:0;width:100%;height:100%" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="content">
+                                        <address>
+                                            <strong>Garaffah Branch</strong><br>
+                                            <small>
+                                                Beside Immigration Office, Garaffah, <br>
+                                                Doha State of Qatar<br>
+                                                <abbr title="Phone"><i class="fa fa-phone"></i></abbr> +(974) 4466-66-36
+                                            </small>
+                                        </address>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="footer-content">
+                    <ul>
+                        <li><a href="#" class="btn btn-transparent btn-sm"><i class="fa fa-facebook fa-fw"></i></a></li>
+                        <li><a href="#" class="btn btn-transparent btn-sm"><i class="fa fa-youtube fa-fw"></i></a></li>
+                        <li><a href="#" class="btn btn-transparent btn-sm"><i class="fa fa-instagram fa-fw"></i></a></li>
+                        <li><a href="#" class="btn btn-transparent btn-sm"><i class="fa fa-twitter fa-fw"></i></a></li>
+                        <li><a href="#" class="btn btn-transparent btn-sm"><i class="fa fa-map-marker fa-fw"></i></a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- end -->
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/dist/scripts/toolset.min.js"></script>
+    <script>
+            $(document).ready(function() {
+
+                var slider = new Slider();
+                var sticker = new Sticker();
+
+                slider.init();
+                sticker.init({delay:3000,src:""});
+
+            });
+    </script>
+</body>
+</html>

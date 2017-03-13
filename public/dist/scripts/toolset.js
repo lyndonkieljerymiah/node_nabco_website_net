@@ -57,20 +57,19 @@ var Slider = function () {
 
     };
 
+    var timer,isStopPlay=false;
     var arraySource = [
         { source: "https://www.youtube.com/watch?v=j5jIjI_Ccqc" },
         { source: "https://www.youtube.com/watch?v=DTKQONRv6Ng" },
         { source: "https://www.youtube.com/watch?v=Z1eKNuno7Uw" }
     ];
-
-
+    
     this.init = function () {
-
-
-
         //setting up button
         $("#downButton").on("click", next);
         $("#upButton").on("click", prev);
+        //set timeout
+        autoPlay();
     }
 
     function next() {
@@ -80,6 +79,25 @@ var Slider = function () {
     function prev() {
         controlIndex.prev();
     }
+
+    function autoPlay() {
+        if (isStopPlay) {
+            clearTimeout(timer);
+            return;
+        }
+        timer = setTimeout(function () {
+            next();
+            autoPlay();
+        },3000);
+    }
+    function play() {
+        isStopPlay = false;
+        autoPlay();
+    }
+    function stop() {
+        isStopPlay = true;
+    }
+
 
 
 };

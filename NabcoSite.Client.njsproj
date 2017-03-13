@@ -48,7 +48,9 @@
     <Content Include="public\src\less\parts\slider.less" />
     <Content Include="public\src\less\parts\sticker.less" />
     <Content Include="public\src\less\parts\variable.less" />
+    <Content Include="public\src\less\social.less" />
     <Content Include="README.md" />
+    <Content Include="public\template\sticker.html" />
     <Content Include="views\index.vash" />
     <Content Include="views\_layout.vash" />
   </ItemGroup>
@@ -63,6 +65,7 @@
     <Folder Include="public\src\less\" />
     <Folder Include="public\src\less\parts\" />
     <Folder Include="public\src\scripts\" />
+    <Folder Include="public\template\" />
     <Folder Include="views\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
