@@ -37,6 +37,7 @@
     <Compile Include="public\src\scripts\sticker.js" />
     <Compile Include="server.js" />
     <Content Include=".bowerrc" />
+    <Content Include=".env" />
     <Content Include="package.json" />
     <Content Include="public\dist\css\default.css" />
     <Content Include="public\dist\css\default.min.css" />
