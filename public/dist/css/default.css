@@ -114,7 +114,22 @@ label {
   top: 10px;
   right: 10px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 1201px) {
+  .nb-header .btn-mobnav {
+    display: none;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .nb-header .btn-mobnav {
+    display: none;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .nb-header .btn-mobnav {
+    display: none;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
   .nb-header .btn-mobnav {
     display: none;
   }

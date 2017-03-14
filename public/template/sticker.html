@@ -1,13 +1,4 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-    <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="/dist/css/social.min.css" rel="stylesheet" />
-</head>
-<body>
-    <!-- sticker -->
+﻿    <!-- sticker -->
     <div id="sticker" class="sticker stk-show">
         <div class="social-container">
             <ul>
@@ -147,18 +138,17 @@
         </div>
     </div>
     <!-- end -->
-    <script src="/lib/jquery/dist/jquery.min.js"></script>
-    <script src="/dist/scripts/toolset.min.js"></script>
-    <script>
-            $(document).ready(function() {
 
-                var slider = new Slider();
-                var sticker = new Sticker();
+<script src="/lib/jquery/dist/jquery.min.js"></script>
+<script src="/dist/scripts/toolset.min.js"></script>
+<script>
+        $(document).ready(function() {
 
-                slider.init();
-                sticker.init({delay:3000,src:""});
+            var slider = new Slider();
+            var sticker = new Sticker();
 
-            });
-    </script>
-</body>
-</html>
+            slider.init();
+            sticker.init({delay:3000,src:""});
+
+        });
+</script>

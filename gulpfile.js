@@ -22,6 +22,7 @@ gulp.task('less', function () {
 });
 
 gulp.task("watch", function () {
+
     reload.listen();
 
     gulp.watch([
@@ -34,7 +35,6 @@ gulp.task("watch", function () {
     gulp.watch([
         'public/src/less/parts/*.less',
         'public/src/less/*.less'], ['minify-css']);
-
 });
 
 gulp.task('minify-css', ['less'], function () {

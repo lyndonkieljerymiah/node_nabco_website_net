@@ -6,11 +6,11 @@
 @social-icon-width: 30px;
 @social-icon-height: 40px;
 @social-icon-line-height: (@social-icon-height + 2);
-@sticker-width-xl: 420px;
+@sticker-width-xl: 370px;
 @sticker-width-lg: @sticker-width-xl;
-@sticker-width-md: (@sticker-width-xl - 20);
-@sticker-width-sm: (@sticker-width-md - 20);
-@sticker-width-xs: (@sticker-width-sm - 20);
+@sticker-width-md: (@sticker-width-xl - 10);
+@sticker-width-sm: (@sticker-width-md - 10);
+@sticker-width-xs: (@sticker-width-sm - 10);
 
 .shadow() {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3), 0 5px 12px rgba(0, 0, 0, 0.2);
@@ -22,7 +22,7 @@
 
 .sticker {
     position: absolute;
-    top: 0;
+    top: 5%;
     left: 0;
 
     @media @lg-media {

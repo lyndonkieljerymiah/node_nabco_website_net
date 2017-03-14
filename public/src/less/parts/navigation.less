@@ -3,19 +3,29 @@
 
 
 .nb-header {
-
     width: 100%;
     background-color: @color-creme;
-    position:relative;
+    position: relative;
 
-    @media @xl-media, @lg-media {min-height: 190px;}
-    @media @md-media {min-height: 150px;}
-    @media @xs-media {min-height: 120px;}
-    
+    @media @xl-media, @lg-media {
+        min-height: 190px;
+    }
+
+    @media @md-media {
+        min-height: 150px;
+    }
+
+    @media @xs-media {
+        min-height: 120px;
+    }
+
     .nb-logo {
         width: 100%;
         height: 120px;
-        @media @xs-media {height: 80px;}
+
+        @media @xs-media {
+            height: 80px;
+        }
     }
 
     .nb-navbar {
@@ -25,39 +35,59 @@
         width: 100%;
         min-height: 50px;
         background-color: @color-violet;
-        @media @xs-media {display: none;}
+
+        @media @xs-media {
+            display: none;
+        }
+
         ul {
             margin: 0;
             list-style: none;
-            li { 
+
+            li {
                 float: left;
+
                 a {
                     display: block;
                     padding: 12px 10px;
                     text-decoration: none;
                     color: @color-creme;
                     height: 50px;
+
                     &:hover {
                         background-color: rgba(255,255,255,0.4);
                         color: lightblue;
                     }
                 }
             }
+
             &:after {
-                clear:both;
+                clear: both;
                 display: table;
             }
         }
     }
-    
+
     .btn-mobnav {
-        @media @xs-media {
+
+        @media @xl-media {
             display: none;
         }
-        
+
+        @media @lg-media {
+            display: none;
+        }
+
+        @media @md-media {
+            display: none;
+        }
+
+        @media @sm-media {
+            display: none;
+        }
+
         position: absolute;
         top: 10px;
         right: 10px;
-        
     }
 }
