@@ -1,0 +1,156 @@
+﻿@import "variable.less";
+@import "mixin.less";
+
+@drawer-width: 350px;
+@drawer-height: 600px;
+@offset-height: 40px;
+
+@drawer-content-height: (@drawer-height - @offset-height);
+@drawer-header-height: @offset-height;
+@drawer-footer-height: (@offset-height - 10);
+@social-icon-line-height:32px;
+@drawer-radius: 10px;
+
+.shadow() {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3), 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.drawer {
+    width: @drawer-width;
+    height: @drawer-height;
+    left: 20px;
+    top: 0;
+    position: fixed;
+    background: @gray-lighter;
+    z-index: 999;
+    .shadow();
+    .transition(top,1.1s,ease-in-out);
+
+    .heading {
+        width: 100%;
+        background: @color-red url('bg1.jpg') top left no-repeat;
+        background-size: cover;
+        height: @drawer-header-height;
+        position: relative;
+
+        #drawer-title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            padding: @padding-small-horizontal;
+            color: @color-creme;
+            z-index: 999;
+        }
+
+        .dark-cover {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: rgba(0,0,0,0.5);
+        }
+    }
+
+    .content {
+        padding: 5px;
+        height: @drawer-content-height;
+        width: 100%;
+        overflow-y: scroll;
+        background: #F5F5F5;
+
+        &::-webkit-scrollbar {
+            width: 8px;
+            background-color: #F5F5F5;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            .border-radius(10px);
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            background-color: rgba(0,0,0,0.2);
+        }
+    }
+
+    .footer {
+        width: 80%;
+        position: absolute;
+        bottom: ((@drawer-footer-height+10) * -1);
+        left: 0;
+
+        > ul {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: @drawer-footer-height;
+            list-style: none;
+
+            li {
+                float: left;
+                width: 15%;
+
+                a {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    cursor: pointer;
+                    height: @drawer-footer-height;
+                    .transition(all,0.3s,ease-in-out);
+                    .border-bottom-radius(@drawer-radius);
+                    .shadow();
+
+                    i {
+                        display: inline-block;
+                        line-height: @social-icon-line-height;
+                    }
+
+                    &:hover {
+                        background-color: @gray-lighter;
+                        height: (@drawer-footer-height + 10);
+                        .transition(all,0.3s,ease-in-out);
+                    }
+
+                    &.active {
+                        background-color: @gray-lighter;
+                        height: (@drawer-footer-height + 10);
+                        .shadow();
+                    }
+
+                    &.bg-blue {
+                        background-color: #27A8E1;
+                        color: whitesmoke;
+                    }
+
+                    &.bg-red {
+                        background-color: #DF2826;
+                        color: whitesmoke;
+                    }
+
+                    &.bg-gray {
+                        background-color: #cecece;
+                        color: whitesmoke;
+                    }
+
+                    &.bg-creme {
+                        background-color: @color-creme;
+                        color: @color-brown;
+                    }
+                }
+            }
+
+            &:after {
+                .clearfix();
+            }
+        }
+    }
+
+    &.stk-hide {
+        top: (@drawer-height * -1);
+        .transition(top,1.1s,ease-in-out);
+    }
+
+    &.stk-show {
+        top: 0;
+        .transition(top,1.1s,ease-in-out);
+    }
+}

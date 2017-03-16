@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
     <head>
+
         <title>@model.title</title>
 
         <meta charset="UTF-8">
@@ -10,12 +11,10 @@
         <link href="/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
         <link href="/dist/css/default.min.css" rel="stylesheet" />
         <link href="/dist/css/social.min.css" rel="stylesheet" />
+
     </head>
     <body>
         <header class="nb-header">
-            <div class="btn-mobnav">
-                <i class="fa fa-align-justify fa-2x"></i>
-            </div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-5">
@@ -23,17 +22,15 @@
                     </div>
                 </div>
             </div>
-            <nav class="nb-navbar">
+            <nav class="nb-navbar visible-md visible-lg">
                 <div class="container">
                     <ul>
-                        <li><a href="">Products</a></li>
-                        <li><a href="">New Arrivals</a></li>
-                        <li>
-                            <a href=""></a>
-                        </li>
-                        <li>
-                            <a href=""></a>
-                        </li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Living Room</a></li>
+                        <li><a href="#">Dining Room</a></li>
+                        <li><a href="#">Bed Room</a></li>
+                        <li><a href="#">Hall</a></li>
+                        
                     </ul>
                 </div>
             </nav>
@@ -42,43 +39,20 @@
             @html.block("body")
         </div>
 
-        <!-- sticker -->
-        <div id="sticker" class="sticker stk-show">
-            <div class="social-container">
-                <ul>
-                    <li class="social-nav">
-                        <a id="social-fb" class="social-icon-bg bg-blue active" data-container="fb-container" data-title="Facebook">
-                            <span><i class="fa fa-facebook"></i></span>
-                        </a>
-                    </li>
-                    <li class="social-nav">
-                        <a id="social-youtube" class="social-icon-bg bg-red" data-container="youtube-container" data-title="Youtube">
-                            <span><i class="fa fa-youtube-play"></i></span>
-                        </a>
-                    </li>
-                    <li class="social-nav">
-                        <a id="social-comment" class="social-icon-bg bg-gray" data-container="comment-container" data-title="Comment">
-                            <span><i class="fa fa-envelope-o"></i></span>
-                        </a>
-                    </li>
-                    <li class="social-nav">
-                        <a id="social-location" class="social-icon-bg bg-creme" data-container="location-container" data-title="Location">
-                            <span><i class="fa fa-map-marker"></i></span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="wrapper">
+        <!--drawer -->
+        <div class="hidden-xs">
+            <div id="drawer" class="drawer stk-show">
                 <header class="heading">
-                    <p id="social-title">Facebook</p>
+                    <p id="drawer-title">Facebook</p>
                     <div class="dark-cover"></div>
                 </header>
+                
                 <div class="content">
-                    <div id="fb-container">
+                    <div id="fb-drawer-content">
                         <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNABCO-Furniture-Centre-1503548559966817%2F&tabs=timeline&width=340&height=680&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1805387546380028"
-                                height="620" style="border:none;overflow:hidden;width:100%" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                                height="560" style="border:none;overflow:hidden;width:100%" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                     </div>
-                    <div id="youtube-container" style="display:none">
+                    <div id="youtube-drawer-content" style="display:none">
                         <div class="nb-slider">
                             <div class="nb-slider-container">
                                 <ul>
@@ -95,7 +69,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="comment-container" style="display:none">
+                    <div id="comment-drawer-content" style="display:none">
                         <form class="form">
                             <div class="form-group">
                                 <label>Email Address:</label>
@@ -127,7 +101,7 @@
                             </div>
                         </form>
                     </div>
-                    <div id="location-container" style="display:none">
+                    <div id="location-drawer-content" style="display:none">
                         <div class="nb-location">
                             <div class="location-wrapper">
                                 <ul>
@@ -136,9 +110,9 @@
                                             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3609.0619003262086!2d51.573588!3d25.23484!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45cee18e475f97%3A0x3e1da4faed0d794c!2zTmFiY28gRnVybml0dXJlIENlbnRlciDZhdix2YPYsiDZhtin2KjZg9mIINmE2YTZhdmB2LHZiNi02KfYqg!5e0!3m2!1sen!2s!4v1489251350100"
                                                     frameborder="0" style="border:0;width:100%;height:100%" allowfullscreen></iframe>
                                         </div>
-                                        <div class="content">
-                                            <address>
-                                                <strong>Wakrah Branch</strong><br>
+                                        <div>
+                                            <address style="margin-bottom:0">
+                                                <strong classs="text-mute">Wakrah Branch</strong><br>
                                                 <small>
                                                     Airport Street, Wakra Road P.O. Box 1654, <br>
                                                     Doha State of Qatar<br>
@@ -152,8 +126,8 @@
                                             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28851.647069169227!2d51.46848!3d25.322479!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x677700b4dc79f3ea!2sNABCO+FURNITURE+CENTRE%2C+Garaffah+Branch!5e0!3m2!1sen!2s!4v1489251717884"
                                                     frameborder="0" style="border:0;width:100%;height:100%" allowfullscreen></iframe>
                                         </div>
-                                        <div class="content">
-                                            <address>
+                                        <div>
+                                            <address style="margin-bottom:0">
                                                 <strong>Garaffah Branch</strong><br>
                                                 <small>
                                                     Beside Immigration Office, Garaffah, <br>
@@ -167,38 +141,74 @@
                             </div>
                         </div>
                     </div>
+                    
+                    
                 </div>
                 <footer class="footer">
-                    <div class="footer-content">
-                        <ul>
-                            <li><a href="#" class="btn btn-transparent btn-sm"><i class="fa fa-facebook fa-fw"></i></a></li>
-                            <li><a href="#" class="btn btn-transparent btn-sm"><i class="fa fa-youtube fa-fw"></i></a></li>
-                            <li><a href="#" class="btn btn-transparent btn-sm"><i class="fa fa-instagram fa-fw"></i></a></li>
-                            <li><a href="#" class="btn btn-transparent btn-sm"><i class="fa fa-twitter fa-fw"></i></a></li>
-                            <li><a href="#" class="btn btn-transparent btn-sm"><i class="fa fa-map-marker fa-fw"></i></a></li>
-                        </ul>
-                    </div>
+                    <ul>
+                        <li>
+                            <a id="social-fb" class="icon drawer-icon-bg bg-blue active" data-container="fb-drawer-content" data-title="Facebook">
+                                <span><i class="fa fa-facebook"></i></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="social-youtube" class="icon drawer-icon-bg bg-red" data-container="youtube-drawer-content" data-title="Youtube">
+                                <span><i class="fa fa-youtube-play"></i></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="social-comment" class="icon drawer-icon-bg bg-gray" data-container="comment-drawer-content" data-title="Comment">
+                                <span><i class="fa fa-envelope-o"></i></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="social-location" class="icon drawer-icon-bg bg-creme" data-container="location-drawer-content" data-title="Location">
+                                <span><i class="fa fa-map-marker"></i></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="social-instagram" class="icon drawer-icon-bg bg-creme" data-container="location-drawer-content" data-title="Location">
+                                <span><i class="fa fa-instagram"></i></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="social-twitter" class="icon drawer-icon-bg bg-creme" data-container="location-drawer-content" data-title="Location">
+                                <span><i class="fa fa-twitter"></i></span>
+                            </a>
+                        </li>
+                    </ul>
+
                 </footer>
             </div>
         </div>
-        <!-- end -->
+        <!--end-->
 
-		<!-- chat -->
+		<!--chat -->
 		<div class="chat-holder">
 			<div class="chat-icon-open"></div>
 		</div>
-		<!-- end-->
+		<!--end-->
 
         <script src="/lib/jquery/dist/jquery.min.js"></script>
         <script src="/dist/scripts/toolset.min.js"></script>
+        
         <script>
-            $(document).ready(function () {
+            $(document).ready(function ()
+            {   
+
+                var obj2 = {
+                    target: $("#drawer"),
+                    default: "#fb-drawer-content",
+                    pullIn: { top: 0 },
+                    pullOut: { top: -50 },
+                    headerTarget: "#drawer-title"
+                }
 
                 var slider = new Slider();
-                var sticker = new Sticker();
+                var drawer = new Sticker(obj2);
 
                 slider.init();
-                sticker.init({ delay: 3000, src: "" });
+                drawer.init();
             });
         </script>
     </body>

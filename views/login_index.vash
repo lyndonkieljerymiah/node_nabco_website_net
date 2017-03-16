@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Log in</title>
+    <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/dist/css/login.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    
+    
+    <!--login -->
+    <div class="login">
+        <div class="login-title">
+            <span><i class="fa fa-user-o fa-3x"></i></span>
+        </div>
+        <div class="login-fields">
+            <input type='text' />
+            <input type='password' />
+        </div>
+        <div class="login-submit">
+            <button>Login</button>
+        </div>
+    </div>
+
+</body>
+</html>

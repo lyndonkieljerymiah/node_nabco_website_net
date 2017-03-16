@@ -30,6 +30,8 @@
   <ItemGroup>
     <Compile Include="controllers\homeController.js" />
     <Compile Include="controllers\index.js" />
+    <Compile Include="controllers\loginController.js" />
+    <Compile Include="data\dbase.js" />
     <Compile Include="gulpfile.js" />
     <Compile Include="public\dist\scripts\toolset.js" />
     <Compile Include="public\dist\scripts\toolset.min.js" />
@@ -42,6 +44,8 @@
     <Content Include="public\dist\css\default.css" />
     <Content Include="public\dist\css\default.min.css" />
     <Content Include="public\src\less\default.less" />
+    <Content Include="public\src\less\login.less" />
+    <Content Include="public\src\less\parts\drawer.less" />
     <Content Include="public\src\less\parts\interchat.less" />
     <Content Include="public\src\less\parts\location.less" />
     <Content Include="public\src\less\parts\mixin.less" />
@@ -53,10 +57,12 @@
     <Content Include="README.md" />
     <Content Include="public\template\sticker.html" />
     <Content Include="views\index.vash" />
+    <Content Include="views\login_index.vash" />
     <Content Include="views\_layout.vash" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="controllers\" />
+    <Folder Include="data\" />
     <Folder Include="public\" />
     <Folder Include="public\dist\" />
     <Folder Include="public\dist\css\" />

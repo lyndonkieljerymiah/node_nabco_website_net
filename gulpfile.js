@@ -8,14 +8,16 @@
     uglify = require('gulp-uglify'),
     nodemon = require('gulp-nodemon');
 
+//script paths
+var jsFiles = 'public/src/scripts/*.js',
+    jsDest = 'public/dist/scripts';
+
 gulp.task("server", function () {
     connect.server();
 });
 
 gulp.task('less', function () {
-    return gulp.src([
-        "public/src/less/default.less",
-        "public/src/less/social.less"])
+    return gulp.src(["public/src/less/*.less"])
         .pipe(less())
         .pipe(gulp.dest("public/dist/css"))
         .pipe(reload());
@@ -35,20 +37,20 @@ gulp.task("watch", function () {
     gulp.watch([
         'public/src/less/parts/*.less',
         'public/src/less/*.less'], ['minify-css']);
+
 });
 
 gulp.task('minify-css', ['less'], function () {
     return gulp.src([
         'public/dist/css/default.css',
-        'public/dist/css/social.css'])
+        'public/dist/css/social.css',
+        'public/dist/css/login.css'])
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('public/dist/css'));
 });
 
-//script paths
-var jsFiles = 'public/src/scripts/*.js',
-    jsDest = 'public/dist/scripts';
+
 
 gulp.task('scripts', function () {
     return gulp.src(jsFiles)

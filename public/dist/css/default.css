@@ -82,14 +82,12 @@ label {
   min-height: 50px;
   background-color: #293845;
 }
-@media only screen and (max-width: 480px) {
-  .nb-header .nb-navbar {
-    display: none;
-  }
-}
 .nb-header .nb-navbar ul {
   margin: 0;
   list-style: none;
+  padding: 0;
+  width: 100%;
+  display: block;
 }
 .nb-header .nb-navbar ul li {
   float: left;
@@ -105,9 +103,13 @@ label {
   background-color: rgba(255, 255, 255, 0.4);
   color: lightblue;
 }
-.nb-header .nb-navbar ul:after {
-  clear: both;
+.nb-header .nb-navbar ul:after:before,
+.nb-header .nb-navbar ul:after:after {
+  content: " ";
   display: table;
+}
+.nb-header .nb-navbar ul:after:after {
+  clear: both;
 }
 .nb-header .btn-mobnav {
   position: absolute;
